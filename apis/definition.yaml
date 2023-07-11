@@ -31,5 +31,5 @@ spec:
                       - west
                 required:
                   - region
-              required:
-              - parameters
+            required:
+            - parameters
