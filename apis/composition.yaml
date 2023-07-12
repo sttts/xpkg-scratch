@@ -7,7 +7,7 @@ metadata:
 spec:
   writeConnectionSecretsToNamespace: upbound-system
   compositeTypeRef:
-    apiVersion: xsimplebuckets.jason.org/v1alpha1
+    apiVersion: jason.org/v1alpha1
     kind: XSimpleBucket
   resources:
   - name: bucket
