@@ -1,0 +1,27 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: buckets
+  labels:
+    provider: aws
+spec:
+  writeConnectionSecretsToNamespace: upbound-system
+  compositeTypeRef:
+    apiVersion: xsimplebuckets.jason.org/v1alpha1
+    kind: XSimpleBucket
+  resources:
+  - name: bucket
+    base:
+      apiVersion: s3.aws.upbound.io/v1beta1
+      kind: Bucket
+      spec:
+        forProvider:
+          region: us-west-1
+    patches:
+      - fromFieldPath: "spec.parameters.region"
+        toFieldPath: "spec.forProvider.region"
+        transforms:
+        - type: map
+          map:
+            east: us-east-2
+            west: us-west-1
