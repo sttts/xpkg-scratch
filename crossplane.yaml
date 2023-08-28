@@ -16,4 +16,6 @@ spec:
     version: ">=v1.7.0-0"
   dependsOn:
     - provider: xpkg.upbound.io/upbound/provider-aws-s3
-      version: "v0.37.0"  
+      version: "v0.37.0"
+    - provider: xpkg.upbound.io/jastang/provider-kubernetes
+      version: "v0.0.1"
