@@ -1,0 +1,8 @@
+apiVersion: jason.org/v1alpha1
+kind: SimpleBucket
+metadata:
+  name: claim-746
+  namespace: default
+spec:
+  parameters:
+    region: east
